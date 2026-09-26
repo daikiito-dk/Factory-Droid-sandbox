@@ -6,6 +6,7 @@
 - **使用技術**: JavaScript、Markdown
 - **想定時間**: 短時間
 - **Issue**: [#5](https://github.com/daikiito-dk/Factory-Droid-sandbox/issues/5)
+- **Pull Request**: [#6](https://github.com/daikiito-dk/Factory-Droid-sandbox/pull/6)
 - **ブランチ**: `level-3-github-workflow`
 
 ## 人間のTODO
@@ -13,8 +14,8 @@
 - [x] Issueの目的と完了条件を確認する
 - [x] 実装前の計画とテストケース案を確認する
 - [x] 実装コミットとドキュメントコミットを区別する
-- [ ] Pull Requestのコミット一覧をレビューする
-- [ ] 振り返りを確認する
+- [x] Pull Requestのコミット一覧をレビューする
+- [x] 振り返りを確認する
 
 ## DroidのTasks
 
@@ -22,7 +23,7 @@
 - [x] 実装計画を提示する
 - [x] 実装とテストを1つ目のコミットにする
 - [x] ドキュメントを2つ目のコミットにする
-- [ ] Pull Requestで変更と検証結果を説明する
+- [x] Pull Requestで変更と検証結果を説明する
 
 ## 成果物
 
