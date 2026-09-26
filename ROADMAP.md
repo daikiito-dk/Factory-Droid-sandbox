@@ -36,7 +36,7 @@ Daikiが、FactoryとDroidを使って、課題の定義から実装、検証、
 | Level | テーマ | 主な練習 | 状態 |
 | --- | --- | --- | --- |
 | 0 | 環境と記録 | リポジトリ構成、差分、記録方法 | 完了 |
-| 1 | Droidの基本 | 調査、要約、計画、質問、レビュー | 未着手 |
+| 1 | Droidの基本 | 調査、要約、計画、質問、レビュー | 完了 |
 | 2 | 小さな開発 | バグ修正、機能追加、テスト、リファクタリング | 未着手 |
 | 3 | GitHubワークフロー | Issue、ブランチ、コミット、Pull Request | 未着手 |
 | 4 | Factoryの機能 | Skills、ブラウザテスト、レビュー、文書生成 | 未着手 |
@@ -56,6 +56,6 @@ Daikiが、FactoryとDroidを使って、課題の定義から実装、検証、
 
 ## 次の課題
 
-- Level 1: JavaScriptとMarkdownを使ったDroidの基本操作
-- Issue、ブランチ、Pull Request形式で進める
-- `templates/lesson-template.md` と `templates/reflection-template.md` を使う
+- Level 2: JavaScriptの小さな機能追加とテスト
+- 既存コードを調査し、変更前に計画を確認する
+- 人間のTODOとDroidのTasksを分けてIssueとPull Requestに記録する
