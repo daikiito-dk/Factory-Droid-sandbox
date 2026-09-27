@@ -1,0 +1,11 @@
+{
+  "humanTasks": [
+    { "title": "Issueを確認する", "completed": true },
+    { "title": "Pull Requestをレビューする", "completed": false }
+  ],
+  "droidTasks": [
+    { "title": "実装する", "completed": true },
+    { "title": "テストする", "completed": true },
+    { "title": "振り返りを報告する", "completed": false }
+  ]
+}
