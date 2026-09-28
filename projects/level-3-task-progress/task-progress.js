@@ -12,4 +12,10 @@ function summarizeTaskProgress(humanTasks, droidTasks) {
   };
 }
 
-module.exports = { summarizeTaskProgress };
+const taskProgressApi = { summarizeTaskProgress };
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = taskProgressApi;
+} else if (typeof window !== 'undefined') {
+  window.taskProgress = taskProgressApi;
+}
