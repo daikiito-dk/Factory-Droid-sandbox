@@ -2,6 +2,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const vm = require('node:vm');
 const {
   buildProgressModel,
   buildDashboardModel,
@@ -56,7 +57,32 @@ test('HTMLに2つの役割と進捗バーを含める', () => {
   assert.match(html, /人間のTODO/);
   assert.match(html, /Droid Tasks/);
   assert.match(html, /role="progressbar"/);
+  assert.match(html, /aria-label="人間のTODOの進捗"/);
+  assert.match(html, /aria-label="Droid Tasksの進捗"/);
   assert.match(html, /100%/);
+});
+
+test('クラシックスクリプトとしてブラウザで描画できる', () => {
+  const root = { innerHTML: '' };
+  const context = vm.createContext({
+    document: {
+      querySelector(selector) {
+        return selector === '#dashboard' ? root : null;
+      },
+    },
+  });
+  context.window = context;
+
+  vm.runInContext(
+    fs.readFileSync(path.join(__dirname, '../level-3-task-progress/task-progress.js'), 'utf8'),
+    context,
+  );
+  vm.runInContext(fs.readFileSync(path.join(__dirname, 'dashboard.js'), 'utf8'), context);
+
+  assert.equal(typeof context.graduationDashboard, 'object');
+  assert.match(root.innerHTML, /人間のTODO/);
+  assert.match(root.innerHTML, /Droid Tasks/);
+  assert.match(root.innerHTML, /role="progressbar"/);
 });
 
 test('index.htmlが必要なスクリプトとルート要素を持つ', () => {

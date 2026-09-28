@@ -1,4 +1,4 @@
-const taskProgressApi =
+const taskProgressModule =
   typeof module !== 'undefined' && module.exports
     ? require('../level-3-task-progress/task-progress.js')
     : window.taskProgress;
@@ -20,7 +20,7 @@ function calculatePercent(completed, total) {
 }
 
 function buildProgressModel(tasks) {
-  const summary = taskProgressApi.summarizeTaskProgress(tasks, []);
+  const summary = taskProgressModule.summarizeTaskProgress(tasks, []);
   return {
     total: summary.human.total,
     completed: summary.human.completed,
@@ -29,7 +29,7 @@ function buildProgressModel(tasks) {
 }
 
 function buildDashboardModel({ humanTasks, droidTasks }) {
-  const summary = taskProgressApi.summarizeTaskProgress(humanTasks, droidTasks);
+  const summary = taskProgressModule.summarizeTaskProgress(humanTasks, droidTasks);
   return {
     human: {
       ...summary.human,
@@ -76,7 +76,7 @@ function renderProgressCard(label, progress) {
         <strong>${progress.percent}%</strong>
       </div>
       <p>${progress.completed}/${progress.total}件完了</p>
-      <div class="progress-track" role="progressbar" aria-valuenow="${progress.percent}" aria-valuemin="0" aria-valuemax="100">
+      <div class="progress-track" role="progressbar" aria-label="${escapeHtml(label)}の進捗" aria-valuenow="${progress.percent}" aria-valuemin="0" aria-valuemax="100">
         <div class="progress-value" style="width: ${progress.percent}%"></div>
       </div>
       <ul class="task-list">${renderTaskList(progress.tasks)}</ul>
