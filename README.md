@@ -68,9 +68,16 @@ templates/ 課題や振り返りのテンプレート
 - [卒業課題の振り返り](journal/level-7-graduation-dashboard.md)
 - [GitHub Actions Workflow](.github/workflows/test.yml)
 
+### プロダクトポートフォリオマップ
+
+Droidと一緒に開発している8つのプロダクトを、利用者・利用レイヤー・市場規模の参考値で整理した静的マップです。市場規模は隣接カテゴリの推定値であり、各プロダクトのTAM/SAMではありません。
+
+- [ポートフォリオマップ（SVG）](projects/product-portfolio-map/portfolio-map.svg)
+- [マップの説明と出典一覧](projects/product-portfolio-map/README.md)
+
 ### 検証状況
 
-- Node.js標準テスト: 16件成功
+- Node.js標準テスト: 22件成功（ポートフォリオマップのテスト6件を含む）
 - CLIスモークテスト: 成功
 - ブラウザ相当のスクリプト実行: 成功
 - GitHub Actions: `main`で成功
