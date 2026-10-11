@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1400" role="img" aria-labelledby="title desc">
+  <title id="title">Product portfolio map</title>
+  <desc id="desc">Eight products mapped by user, use case, technical layer, adjacent market-size proxy, maturity, and priority.</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP", sans-serif; }
+    .canvas { fill: #f4f6fb; }
+    .header { fill: #14213d; }
+    .title { fill: #fff; font-size: 34px; font-weight: 750; }
+    .subtitle { fill: #d7e0f0; font-size: 17px; }
+    .legend { fill: #fff; font-size: 14px; font-weight: 700; }
+    .band { stroke: #dbe2ef; stroke-width: 1; }
+    .layer-code { font-size: 15px; font-weight: 800; letter-spacing: 1px; }
+    .layer-title { fill: #18243a; font-size: 21px; font-weight: 750; }
+    .layer-note { fill: #536176; font-size: 14px; }
+    .card { fill: #fff; stroke: #d8e0ec; stroke-width: 1.5; }
+    .product { fill: #16233b; font-size: 22px; font-weight: 750; }
+    .detail { fill: #344258; font-size: 15px; }
+    .market { fill: #263954; font-size: 14px; font-weight: 650; }
+    .stage { fill: #66748a; font-size: 13px; }
+    .p1 { fill: #dff4e9; }
+    .p1text { fill: #126542; }
+    .p2 { fill: #e6efff; }
+    .p2text { fill: #244f9a; }
+    .p3 { fill: #eceff4; }
+    .p3text { fill: #4d5868; }
+    .chip { font-size: 13px; font-weight: 800; }
+    .foot { fill: #536176; font-size: 14px; }
+  </style>
+
+  <rect class="canvas" width="1600" height="1400"/>
+  <rect class="header" width="1600" height="145"/>
+  <text class="title" x="42" y="58">Product portfolio map</text>
+  <text class="subtitle" x="44" y="91">利用者 → 業務課題 → プロダクト → 利用レイヤー　｜　8 products · snapshot 2026-10-11</text>
+  <text class="subtitle" x="44" y="119">市場規模は隣接カテゴリのproxy。各プロダクト固有のTAM/SAMとは異なります。</text>
+  <rect class="p1" x="1190" y="36" width="116" height="30" rx="15"/>
+  <text class="chip p1text" x="1209" y="56">P1 · Focus</text>
+  <rect class="p2" x="1315" y="36" width="116" height="30" rx="15"/>
+  <text class="chip p2text" x="1334" y="56">P2 · Validate</text>
+  <rect class="p3" x="1440" y="36" width="116" height="30" rx="15"/>
+  <text class="chip p3text" x="1458" y="56">P3 · Defer</text>
+
+  <!-- L4: user-facing workflows -->
+  <rect class="band" x="26" y="160" width="1548" height="270" rx="22" fill="#edf3ff"/>
+  <text class="layer-code" x="48" y="207" fill="#435e98">L4 · APP</text>
+  <text class="layer-title" x="48" y="241">業務アプリ</text>
+  <text class="layer-note" x="48" y="272">現場・研究者が</text>
+  <text class="layer-note" x="48" y="294">日々使うワークフロー</text>
+  <text class="layer-note" x="48" y="335">2 products</text>
+
+  <g transform="translate(292 173)">
+    <rect class="card" width="620" height="244" rx="18"/>
+    <text class="product" x="22" y="39">TerroirSync</text>
+    <rect class="p2" x="471" y="17" width="128" height="27" rx="13"/>
+    <text class="chip p2text" x="489" y="36">P2 · Validate</text>
+    <text class="detail" x="22" y="76">利用者: カリフォルニアのブドウ農家・RCD</text>
+    <text class="detail" x="22" y="105">用途: 現場記録 → 認証・補助金用エビデンス</text>
+    <text class="market" x="22" y="146">市場proxy: vineyard software $2.39B (2025 forecast, low confidence) [S5]</text>
+    <text class="market" x="22" y="169">初期地域: California 540k wine-grape acres (2025) [S6]</text>
+    <text class="stage" x="22" y="213">Stage: Prototype　·　係数・PDF・申請連携は未実証</text>
+  </g>
+
+  <g transform="translate(932 173)">
+    <rect class="card" width="636" height="244" rx="18"/>
+    <text class="product" x="22" y="39">HiveMind-UI</text>
+    <rect class="p2" x="487" y="17" width="128" height="27" rx="13"/>
+    <text class="chip p2text" x="505" y="36">P2 · Validate</text>
+    <text class="detail" x="22" y="76">利用者: UX研究者・プロダクトチーム・マーケ担当</text>
+    <text class="detail" x="22" y="105">用途: ペルソナでWeb操作 → 摩擦・離脱レポート</text>
+    <text class="market" x="22" y="146">市場proxy: UX research software $470M (2025) [S4]</text>
+    <text class="market" x="22" y="169">synthetic usability testing固有のTAMは未確認</text>
+    <text class="stage" x="22" y="213">Stage: MVP　·　人間テストとの比較が次の検証</text>
+  </g>
+
+  <!-- L3: domain middleware -->
+  <rect class="band" x="26" y="446" width="1548" height="270" rx="22" fill="#edf8f2"/>
+  <text class="layer-code" x="48" y="493" fill="#317457">L3 · DOMAIN</text>
+  <text class="layer-title" x="48" y="527">業務基盤</text>
+  <text class="layer-note" x="48" y="558">業界固有のルール・</text>
+  <text class="layer-note" x="48" y="580">プロトコルを処理</text>
+  <text class="layer-note" x="48" y="621">2 products</text>
+
+  <g transform="translate(292 459)">
+    <rect class="card" width="620" height="244" rx="18"/>
+    <text class="product" x="22" y="39">Openenisa</text>
+    <rect class="p1" x="471" y="17" width="128" height="27" rx="13"/>
+    <text class="chip p1text" x="489" y="36">P1 · Focus</text>
+    <text class="detail" x="22" y="76">利用者: 製品セキュリティ・PSIRT・コンプライアンス</text>
+    <text class="detail" x="22" y="105">用途: SBOM + 脆弱性 + VEX → CRA報告準備</text>
+    <text class="market" x="22" y="146">市場proxy: SBOM management $1.54B (2025) [S2]</text>
+    <text class="market" x="22" y="169">規制・提出フローの実顧客検証が次のゲート</text>
+    <text class="stage" x="22" y="213">Stage: MVP　·　ENISAへの自動送信は未対応</text>
+  </g>
+
+  <g transform="translate(932 459)">
+    <rect class="card" width="636" height="244" rx="18"/>
+    <text class="product" x="22" y="39">HydraGate</text>
+    <rect class="p2" x="487" y="17" width="128" height="27" rx="13"/>
+    <text class="chip p2text" x="505" y="36">P2 · Validate</text>
+    <text class="detail" x="22" y="76">利用者: データセンター運用・CDUメーカー</text>
+    <text class="detail" x="22" y="105">用途: Modbus冷却設備 → Redfish風API・安全停止</text>
+    <text class="market" x="22" y="146">市場proxy: data-center liquid cooling $4.8–6.65B (2025) [S3, S10]</text>
+    <text class="market" x="22" y="169">液冷設備全体の値。安全ゲートウェイの市場ではない</text>
+    <text class="stage" x="22" y="213">Stage: Prototype　·　実機・安全レビュー前</text>
+  </g>
+
+  <!-- L2: data and interoperability -->
+  <rect class="band" x="26" y="732" width="1548" height="270" rx="22" fill="#fff7e9"/>
+  <text class="layer-code" x="48" y="779" fill="#9a6720">L2 · DATA</text>
+  <text class="layer-title" x="48" y="813">データ・標準</text>
+  <text class="layer-note" x="48" y="844">知識・形式・制約を</text>
+  <text class="layer-note" x="48" y="866">共通化する層</text>
+  <text class="layer-note" x="48" y="907">2 products</text>
+
+  <g transform="translate(292 745)">
+    <rect class="card" width="620" height="244" rx="18"/>
+    <text class="product" x="22" y="39">PureStrata</text>
+    <rect class="p1" x="471" y="17" width="128" height="27" rx="13"/>
+    <text class="chip p1text" x="489" y="36">P1 · Focus</text>
+    <text class="detail" x="22" y="76">利用者: 製造・保全エンジニア、製造業AIチーム</text>
+    <text class="detail" x="22" y="105">用途: マニュアル・CAD・不具合知識を出所付きコーパス化</text>
+    <text class="market" x="22" y="146">市場proxy: industrial data management $102.58B (2024) [S1]</text>
+    <text class="market" x="22" y="169">非常に広い隣接カテゴリ。製品SAMは未算定</text>
+    <text class="stage" x="22" y="213">Stage: Early release　·　実工場での継続利用が次のゲート</text>
+  </g>
+
+  <g transform="translate(932 745)">
+    <rect class="card" width="636" height="244" rx="18"/>
+    <text class="product" x="22" y="39">DeCAD</text>
+    <rect class="p3" x="487" y="17" width="128" height="27" rx="13"/>
+    <text class="chip p3text" x="505" y="36">P3 · Defer</text>
+    <text class="detail" x="22" y="76">利用者: 逆設計・リサイクル・ロボット統合チーム</text>
+    <text class="detail" x="22" y="105">用途: OD-BOMで分解制約・除去順序を表現</text>
+    <text class="market" x="22" y="146">隣接proxy: battery disassembly automation $2.8B (2025) [S9]</text>
+    <text class="market" x="22" y="169">設備市場の推定。OD-BOMソフトのTAMではない</text>
+    <text class="stage" x="22" y="213">Stage: Early release　·　外部採用者・変換需要待ち</text>
+  </g>
+
+  <!-- L1: edge, developer tools, control -->
+  <rect class="band" x="26" y="1018" width="1548" height="270" rx="22" fill="#f2effa"/>
+  <text class="layer-code" x="48" y="1065" fill="#6b579d">L1 · EDGE</text>
+  <text class="layer-title" x="48" y="1099">エッジ・制御</text>
+  <text class="layer-note" x="48" y="1130">データ取得や機器操作</text>
+  <text class="layer-note" x="48" y="1152">に近いツール</text>
+  <text class="layer-note" x="48" y="1193">2 products</text>
+
+  <g transform="translate(292 1031)">
+    <rect class="card" width="620" height="244" rx="18"/>
+    <text class="product" x="22" y="39">fast-ccsds-parser</text>
+    <rect class="p2" x="471" y="17" width="128" height="27" rx="13"/>
+    <text class="chip p2text" x="489" y="36">P2 · Validate</text>
+    <text class="detail" x="22" y="76">利用者: 衛星運用・宇宙機開発・テレメトリ解析チーム</text>
+    <text class="detail" x="22" y="105">用途: CCSDS packet → streaming / columnar analytics</text>
+    <text class="market" x="22" y="146">広いproxy: satellite ground stations $40.99B (2025) [S7]</text>
+    <text class="market" x="22" y="169">機器・サービス込み。parser単独のTAMは未確認</text>
+    <text class="stage" x="22" y="213">Stage: Early release　·　採用・導入事例の拡大が焦点</text>
+  </g>
+
+  <g transform="translate(932 1031)">
+    <rect class="card" width="636" height="244" rx="18"/>
+    <text class="product" x="22" y="39">OpenTeleop Mobile</text>
+    <rect class="p3" x="487" y="17" width="128" height="27" rx="13"/>
+    <text class="chip p3text" x="505" y="36">P3 · Defer</text>
+    <text class="detail" x="22" y="76">利用者: ロボティクス研究者・模倣学習データ収集チーム</text>
+    <text class="detail" x="22" y="105">用途: phone → WebRTC → MuJoCo / robot teleoperation</text>
+    <text class="market" x="22" y="146">市場proxy: teleoperations $890.2M (2025) [S8]</text>
+    <text class="market" x="22" y="169">複数業界を含む。phone teleop固有のTAMではない</text>
+    <text class="stage" x="22" y="213">Stage: Prototype　·　実機パートナーが次のゲート</text>
+  </g>
+
+  <text class="foot" x="36" y="1330">市場proxyは世界全体の隣接カテゴリであり、製品のTAM/SAMや売上予測ではありません。定義・調査会社により数値が大きく異なります。</text>
+  <text class="foot" x="36" y="1355">各製品の詳細・出典・優先度の定義は projects/product-portfolio-map/README.md を参照。</text>
+</svg>
